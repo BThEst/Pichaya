@@ -1,0 +1,91 @@
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1.5);
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6e6, #ffc2d1);
+    color: #5a2a27;
+    text-align: center;
+    padding: 50px;
+    overflow-x: hidden;
+}
+.container {
+    background: #fff0f5;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: auto;
+}
+h1 {
+    color: #d6336c;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+h2 {
+    color: #c2185b;
+    margin: 20px 0;
+    font-weight: 600;
+}
+p {
+    font-size: 1.1em;
+    margin: 10px 0 25px 0;
+}
+button {
+    background-color: #ff80ab;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(255, 128, 171, 0.4);
+    font-weight: 600;
+}
+button:hover {
+    background-color: #ec407a;
+    transform: scale(1.05);
+}
+button:active {
+    transform: scale(0.95);
+}
+#secret-message {
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #880e4f;
+    display: none;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fallDown {
+    0% {
+        opacity: 1;
+        transform: translateY(-50px) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(110vh) scale(0.8);
+    }
+}
+
+.heart {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    background-color: #ff4081;
+    clip-path: polygon(50% 0%, 61% 13%, 75% 13%, 88% 26%, 88% 38%, 75% 50%, 50% 80%, 25% 50%, 12% 38%, 12% 26%, 25% 13%, 39% 13%);
+    animation: fallDown 3s forwards;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1000;
+}
+
